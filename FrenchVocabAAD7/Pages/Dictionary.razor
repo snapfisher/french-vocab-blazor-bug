@@ -1,0 +1,398 @@
+﻿@page "/Dictionary"
+
+@using Blazorise.DataGrid;
+@using Toolbelt.Blazor.SpeechSynthesis
+@using System.Globalization;
+
+@inject NavigationManager NavigationManager
+@inject WordList MasterWordList
+@inject SpeechSynthesis Speech
+
+
+<AuthorizeView Context="AuthorizedContext">
+    <Authorized>
+        <PageTitle>Dictionary</PageTitle>
+        <Row>
+            <Column ColumnSize="ColumnSize.Is2">
+                <Button Color="Color.Primary" Outline @onclick='() => NavigationManager.NavigateTo("/")'>Back</Button>
+             </Column>
+        </Row>
+        <br />
+        @GetDictionaryTitle()
+        <br />
+        <br />
+        @if (MasterWordList is not null)
+        {
+            @foreach (var s in MasterWordList.SortedWordList)
+            {
+                <Accordion>
+                    <Collapse>
+                        <CollapseHeader>
+                            <Heading>
+                                <AccordionToggle>
+                                    @if (s is Verb)
+                                    {
+                                        Verb? v = s as Verb;
+                                        if (v is not null)
+                                        {
+                                            string x = v.Infinitive[0].F + " / " + v.Infinitive[0].E;
+                                            @x
+                                        }
+
+                                    }
+                                    else if (s is Number)
+                                    {
+                                        Number? n = s as Number;
+                                        if (n is not null)
+                                        {
+                                            string x = $"{n.Cardinal[0].F} / {n.Cardinal[0].E} - {n.Ordinal[0].F} / {n.Ordinal[0].E}";
+                                            @x
+                                        }
+                                    }
+                                    else if (s is Phrase)
+                                    {
+                                        Phrase? p = s as Phrase;
+                                        if (p is not null)
+                                        {
+                                            string x = $"{p.Definition[0].F} / {p.Definition[0].E}";
+                                            @x
+                                        }
+                                    }
+                                    else if (s is Adverb)
+                                    {
+                                        Adverb? a = s as Adverb;
+                                        if (a is not null)
+                                        {
+                                            string x = $"{a.Adverbe[0].F} / {a.Adverbe[0].E}";
+                                            @x
+                                        }
+                                    }
+                                    else if (s is Noun)
+                                    {
+                                        Noun? n = s as Noun;
+                                        if (n is not null)
+                                        {
+                                            string x = $"{n.Substantif[0].F} / {n.Substantif[0].E}";
+                                            @x
+                                        }
+                                    }
+                                    else if (s is Adjective)
+                                    {
+                                        Adjective? a = s as Adjective;
+                                        if (a is not null)
+                                        {
+                                            string x = $"{a.Adjectif[0].F} / {a.Adjectif[0].E}";
+                                            @x
+                                        }
+                                    }
+                                    else if (s is Article)
+                                    {
+                                        Article? a = s as Article;
+                                        if (a is not null)
+                                        {
+                                            string x = $"{a.Art[0].F} / {a.Art[0].E}";
+                                            @x
+                                        }
+                                    }
+                                    else if (s is Pronoun)
+                                    {
+                                        Pronoun? p = s as Pronoun;
+                                        if (p is not null)
+                                        {
+                                            string x = $"{p.Pronom[0].F} / {p.Pronom[0].E}";
+                                            @x
+                                        }
+                                    }
+                                </AccordionToggle>
+                            </Heading>
+                        </CollapseHeader>
+                        <CollapseBody>
+                            @if (s is Verb)
+                            {
+                                Verb? v = s as Verb;
+                                if (v is not null)
+                                {
+                                    List<OneTwo> oneTwo = new List<OneTwo>();
+                                    oneTwo.Add(new OneTwo($"{v.IndicatifPresent[0].F} / {v.IndicatifPresent[0].E}", $"{v.IndicatifPresent[4].F} / {v.IndicatifPresent[4].E}"));
+                                    oneTwo.Add(new OneTwo($"{v.IndicatifPresent[1].F} / {v.IndicatifPresent[1].E}", $"{v.IndicatifPresent[5].F} / {v.IndicatifPresent[5].E}"));
+                                    oneTwo.Add(new OneTwo($"{v.IndicatifPresent[8].F} / {v.IndicatifPresent[8].E}", $"{v.IndicatifPresent[9].F} / {v.IndicatifPresent[9].E}"));
+                                    oneTwo.Add(new OneTwo($"{v.IndicatifPresent[2].F} / {v.IndicatifPresent[2].E}", $"{v.IndicatifPresent[6].F} / {v.IndicatifPresent[6].E}"));
+                                    oneTwo.Add(new OneTwo($"{v.IndicatifPresent[3].F} / {v.IndicatifPresent[3].E}", $"{v.IndicatifPresent[7].F} / {v.IndicatifPresent[7].E}"));
+
+                                    <DataGrid TItem="OneTwo" Data="@oneTwo" Responsive PageSize="5">
+                                         <DataGridColumn Caption="Verb">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.One)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                        <DataGridColumn Caption="">
+                                            <DisplayTemplate>
+                                                <span style="font-style: italic">@(context.Two)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){v.Infinitive[0].F,v.IndicatifPresent[0].F,v.IndicatifPresent[1].F,v.IndicatifPresent[8].F,v.IndicatifPresent[2].F,v.IndicatifPresent[3].F,v.IndicatifPresent[4].F,v.IndicatifPresent[5].F,v.IndicatifPresent[9].F,v.IndicatifPresent[6].F,v.IndicatifPresent[7].F})'>Prononciation</Button>
+
+                                }
+                            }
+                            else if (s is Number)
+                            {
+                                Number? n = s as Number;
+                                if (n is not null)
+                                {
+                                    List<OneTwo> oneTwo = new List<OneTwo>();
+                                    oneTwo.Add(new OneTwo($"{n.BoundingCardinal[0]}", $"{n.BoundingOrdinal[0]}"));
+                                    if(n.BoundingOrdinal.Count > 1)
+                                        oneTwo.Add(new OneTwo($"{n.BoundingCardinal[1]}", $"{n.BoundingOrdinal[1]}"));
+                                    if (n.BoundingOrdinal.Count > 2)
+                                        oneTwo.Add(new OneTwo($"{n.BoundingCardinal[2]}", $"{n.BoundingOrdinal[2]}"));
+                                    if (n.BoundingOrdinal.Count > 3)
+                                        oneTwo.Add(new OneTwo($"{n.BoundingCardinal[3]}", $"{n.BoundingOrdinal[3]}"));
+                                    if (n.BoundingOrdinal.Count > 4)
+                                        oneTwo.Add(new OneTwo($"{n.BoundingCardinal[4]}", $"{n.BoundingOrdinal[4]}"));
+
+                                    <DataGrid TItem="OneTwo" Data="@oneTwo" Responsive PageSize="5">
+                                         <DataGridColumn Caption="Cardinal Number">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.One)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                        <DataGridColumn Caption="Ordinal Number">
+                                            <DisplayTemplate>
+                                                <span style="font-style: italic">@(context.Two)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){n.Cardinal[0].F, n.Ordinal[0].F})'>Prononciation</Button>
+                                }
+                            }
+                            else if (s is Phrase)
+                            {
+                                Phrase? p = s as Phrase;
+                                if (p is not null)
+                                {
+                                    List<One> one = new List<One>();
+                                    one.Add(new One($"{p.Definition[0].F} / {p.Definition[0].E}"));
+
+                                    <DataGrid TItem="One" Data="@one" Responsive PageSize="1">
+                                         <DataGridColumn Caption="Phrase">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.OnlyOne)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){p.Definition[0].F})'>Prononciation</Button>
+                                }
+                            }
+                            else if (s is Adverb)
+                            {
+                                Adverb? a = s as Adverb;
+                                if (a is not null)
+                                {
+                                    List<One> one = new List<One>();
+                                    one.Add(new One($"{a.Adverbe[0].F} / {a.Adverbe[0].E}"));
+
+                                    <DataGrid TItem="One" Data="@one" Responsive PageSize="1">
+                                         <DataGridColumn Caption="Adverb">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.OnlyOne)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){a.Adverbe[0].F})'>Prononciation</Button>
+
+                                }
+                            }
+                            else if (s is Noun)
+                            {
+                                Noun? n = s as Noun;
+                                if (n is not null)
+                                {
+                                    List<OneTwo> oneTwo = new List<OneTwo>();
+                                    oneTwo.Add(new OneTwo($"{n.Substantif[0].F} / {n.Substantif[0].E}", $"{n.Substantif[1].F} / {n.Substantif[1].E}"));
+
+                                    <DataGrid TItem="OneTwo" Data="@oneTwo" Responsive PageSize="1">
+                                         <DataGridColumn Caption="Noun">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.One)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                        <DataGridColumn Caption="">
+                                            <DisplayTemplate>
+                                                <span style="font-style: italic">@(context.Two)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){n.Substantif[0].F, n.Substantif[1].F})'>Prononciation</Button>
+
+                                }
+                            }
+                            else if (s is Adjective)
+                            {
+                                Adjective? a = s as Adjective;
+                                if (a is not null)
+                                {
+                                    List<OneTwo> oneTwo = new List<OneTwo>();
+                                    oneTwo.Add(new OneTwo($"{a.Adjectif[0].F} / {a.Adjectif[0].E}", $"{a.Adjectif[2].F} / {a.Adjectif[2].E}"));
+                                    oneTwo.Add(new OneTwo($"{a.Adjectif[1].F} / {a.Adjectif[1].E}", $"{a.Adjectif[3].F} / {a.Adjectif[3].E}"));
+
+                                    <DataGrid TItem="OneTwo" Data="@oneTwo" Responsive PageSize="2">
+                                         <DataGridColumn Caption="Adjective">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.One)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                        <DataGridColumn Caption="">
+                                            <DisplayTemplate>
+                                                <span style="font-style: italic">@(context.Two)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){a.Adjectif[0].F,a.Adjectif[1].F,a.Adjectif[2].F,a.Adjectif[3].F})'>Prononciation</Button>
+
+                                }
+                            }
+                            else if (s is Article)
+                            {
+                                Article? a = s as Article;
+                                if (a is not null)
+                                {
+                                    List<OneTwo> oneTwo = new List<OneTwo>();
+                                    oneTwo.Add(new OneTwo($"{a.Art[0].F} / {a.Art[0].E}", $"{a.Art[2].F} / {a.Art[2].E}"));
+                                    oneTwo.Add(new OneTwo($"{a.Art[1].F} / {a.Art[1].E}", $"{a.Art[3].F} / {a.Art[3].E}"));
+
+                                    <DataGrid TItem="OneTwo" Data="@oneTwo" Responsive PageSize="2">
+                                         <DataGridColumn Caption="Article">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.One)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                        <DataGridColumn Caption="">
+                                            <DisplayTemplate>
+                                                <span style="font-style: italic">@(context.Two)</span>
+                                            </DisplayTemplate>
+                                        </DataGridColumn>
+                                    </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){a.Art[0].F,a.Art[1].F,a.Art[2].F,a.Art[3].F})'>Prononciation</Button>
+
+                                }
+                            }
+                            else if (s is Pronoun)
+                            {
+                                Pronoun? p = s as Pronoun;
+                                if (p is not null)
+                                {
+                                    List<OneTwo> oneTwo = new List<OneTwo>();
+                                    oneTwo.Add(new OneTwo($"{p.Pronom[0].F} / {p.Pronom[0].E}", $"{p.Pronom[1].F} / {p.Pronom[1].E}"));
+
+                                    <DataGrid TItem="OneTwo" Data="@oneTwo" Responsive PageSize="1">
+                                         <DataGridColumn Caption="Pronoun">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.One)</span>
+                                             </DisplayTemplate>
+                                         </DataGridColumn>
+                                         <DataGridColumn Caption="">
+                                             <DisplayTemplate>
+                                                 <span style="font-style: italic">@(context.Two)</span>
+                                             </DisplayTemplate>
+                                         </DataGridColumn>
+                                     </DataGrid>
+                                    <Button Color="Color.Primary" Outline @onclick='() => Speak(new List<string>(){p.Pronom[0].F,p.Pronom[1].F})'>Prononciation</Button>
+                                }
+                            }
+                        </CollapseBody>
+                    </Collapse>
+                </Accordion>
+            }
+        }
+
+    </Authorized>
+    <NotAuthorized>
+        <Row>
+            <Column ColumnSize="ColumnSize.Is6.Is6.WithOffset">
+                <Card>
+                    <CardBody>
+                        <CardTitle>
+                            You are unauthorized to view this page.
+                        </CardTitle>
+                    </CardBody>
+                </Card>
+            </Column>
+        </Row>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+
+@code {
+    IReadOnlyCollection<SpeechSynthesisVoice>? voices = null;
+
+    protected override void OnInitialized()
+    {
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            this.voices = await Speech.GetVoicesAsync();
+            this.StateHasChanged();
+        }
+    }
+
+
+    public async void Speak(List<string> frenchText)
+    {
+        if (frenchText is null)
+            return;
+
+        foreach (var f in frenchText)
+        {
+            if(string.IsNullOrEmpty(f))
+                continue;
+
+            var utterance = new SpeechSynthesisUtterance
+                {
+                    Text = f,
+                    Lang = "fr-FR",
+                    Rate = 0.6,
+                };
+
+            if (voices is not null)
+            {
+                utterance.Voice = voices.FirstOrDefault(v => v.Name.Contains("Denise"));
+            }
+
+            await Speech.SpeakAsync(utterance);
+            await Task.Delay(200);
+        }
+    }
+
+    public string GetDictionaryTitle()
+    {
+        return $"Dictionary ({MasterWordList.Count}  entries)";
+    }
+
+    public class OneTwo
+    {
+        public string One { get; set; } = "";
+        public string Two { get; set; } = "";
+
+        public OneTwo(string s1, string s2)
+        {
+            One = s1;
+            Two = s2;
+        }
+    }
+
+    public class One
+    {
+        public string OnlyOne { get; set; } = "";
+
+        public One(string s1)
+        {
+            OnlyOne = s1;
+        }
+    }
+
+}

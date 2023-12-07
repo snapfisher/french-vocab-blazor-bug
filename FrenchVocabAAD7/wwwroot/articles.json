@@ -1,0 +1,6 @@
+[
+  {"Type":"article","Label":"le","Art": [{"F":"le","E":"the (sing., masc)"},{"F":"la","E":"the (sing., fem)"},{"F":"les","E":"the (plu.)"},{"F":"l'","E":"the (in front of vowel)"}]},
+  {"Type":"article","Label":"un","Art": [{"F":"un","E":"a/an (sing., masc)"},{"F":"une","E":"a/an (sing., fem)"},{"F":"un","E":"a/an (sing., masc)"},{"F":"une","E":"a/an (sing., masc)"}]},
+  {"Type":"article","Label":"du","Art": [{"F":"du","E":"some (sing., masc)"},{"F":"de la","E":"some (sing., fem)"},{"F":"des","E":"some (plu.)"},{"F":"de l'","E":"of/from (in front of vowel)"}]},
+  {"Type":"article","Label":"au","Art": [{"F":"au","E":"to the (sing., masc)"},{"F":"à la","E":"to the (sing., fem)"},{"F":"aux","E":"to the (plu.)"},{"F":"à l'","E":"some (in front of vowel)"}]}
+]

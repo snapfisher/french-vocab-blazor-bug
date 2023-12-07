@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <WebPublishMethod>SWACLI</WebPublishMethod>
+    <ResourceId>/subscriptions/xxx/resourceGroups/french/providers/Microsoft.Web/staticSites/frenchvocab</ResourceId>
+    <ResourceGroup>french</ResourceGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishProvider>AzureStaticSite</PublishProvider>
+    <Environment>Production</Environment>
+    <Source>None</Source>
+    <OutputLocation>wwwroot</OutputLocation>
+    <SiteUrlToLaunchAfterPublish>xxx</SiteUrlToLaunchAfterPublish>
+    <_TargetId>AzureStaticWebApp</_TargetId>
+  </PropertyGroup>
+</Project>

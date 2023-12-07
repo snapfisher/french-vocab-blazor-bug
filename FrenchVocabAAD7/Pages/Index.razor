@@ -1,0 +1,365 @@
+﻿@page "/"
+
+@inject HttpClient httpClient
+@inject IConfiguration Configuration
+@inject WordList MasterWordList
+@inject NavigationManager NavigationManager
+@inject StatusTracker statusTracker
+
+        <PageTitle>French Vocabulary</PageTitle>
+        <Row>
+            <Column ColumnSize="ColumnSize.Is4">
+                <Button Color="Color.Primary" Outline @onclick='() => NavigationManager.NavigateTo("/Dictionary")'>Dictionary</Button>
+             </Column>
+             <Column ColumnSize="ColumnSize.Is8">
+                 @Configuration["CurrentDataDescription"]
+             </Column>
+         </Row>
+         <br />
+         <RadioGroup TValue="string" Name="selectedLayoutRadio" CheckedValue="@statusTracker.SelectedLayout" CheckedValueChanged="@OnSelectedLayoutChanged">
+             <Radio Value="@("challenge")">Challenge</Radio>
+             <Radio Value="@("study")">Study</Radio>
+         </RadioGroup>
+         <br />
+         @if (statusTracker.SelectedLayout == "challenge")
+        {
+            <Div>
+                @challengeString
+            </Div>
+        }
+        else
+        {
+            <Div>
+                @studyString
+            </Div>
+        }
+        <br />
+        @if (statusTracker.SelectedLayout == "study")
+        {
+            @if (MasterWordList is not null && showAnimate == true)
+            {
+                <Animate Auto Animation="@Animations.Fade" DelayMilliseconds="200">
+                     <CardDeck>
+                         <Card>
+                             <CardBody>
+                                 <CardTitle Size="4">
+                                     @currentChoice.Question
+                                     <br />
+                                     <Div Flex="Flex.JustifyContent.End">
+                                         <Button Color="Color.Primary" Clicked="@OnStudyClicked" Outline>Next</Button>
+                                 </Div>
+                             </CardTitle>
+                         </CardBody>
+                     </Card>
+                     <Card>
+                         <CardBody>
+                             <CardTitle Size="4">
+                                 @currentChoice.Answers[currentChoice.CorrectAnswer]
+                                 <br />
+                             </CardTitle>
+                         </CardBody>
+                     </Card>
+                 </CardDeck>
+             </Animate>
+            }
+        }
+        else if (statusTracker.SelectedLayout == "challenge")
+        {
+            @if (MasterWordList is not null && showAnimate == true)
+            {
+                <Animate Auto Animation="@Animations.Fade" DelayMilliseconds="200">
+                     <CardDeck>
+                         <Card>
+                             <CardBody>
+                                 <CardTitle Size="4">
+                                     @currentChoice.Question
+                                     <br />
+                                 </CardTitle>
+                             </CardBody>
+                         </Card>
+                         <Card>
+                             <CardBody Margin="Margin.Is0">
+                                 <CardTitle Size="4" TextColor="@chalTextColors[0]">
+                                     @currentChoice.Answers[0]
+                                     <Div Flex="Flex.JustifyContent.End">
+                                         <Button Color="Color.Primary" Disabled="@chalDisabled[0]" Clicked="@(() => OnChallengeClicked(0))" Outline>Next</Button>
+                                 </Div>
+                             </CardTitle>
+                         </CardBody>
+                     </Card>
+                     <Card>
+                         <CardBody Margin="Margin.Is0">
+                             <CardTitle Size="4" TextColor="@chalTextColors[1]">
+                                 @currentChoice.Answers[1]
+                                 <Div Flex="Flex.JustifyContent.End">
+                                     <Button Color="Color.Primary" Disabled="@chalDisabled[1]" Clicked="@(() => OnChallengeClicked(1))" Outline>Next</Button>
+                                 </Div>
+                             </CardTitle>
+                         </CardBody>
+                     </Card>
+                     <Card>
+                         <CardBody Margin="Margin.Is0">
+                             <CardTitle Size="4" TextColor="@chalTextColors[2]">
+                                 @currentChoice.Answers[2]
+                                 <Div Flex="Flex.JustifyContent.End">
+                                     <Button Color="Color.Primary" Disabled="@chalDisabled[2]" Clicked="@(() => OnChallengeClicked(2))" Outline>Next</Button>
+                                 </Div>
+                             </CardTitle>
+                         </CardBody>
+                     </Card>
+                     <Card>
+                         <CardBody Margin="Margin.Is0">
+                             <CardTitle Size="4" TextColor="@chalTextColors[3]">
+                                 @currentChoice.Answers[3]
+                                 <Div Flex="Flex.JustifyContent.End">
+                                     <Button Color="Color.Primary" Disabled="@chalDisabled[3]" Clicked="@(() => OnChallengeClicked(3))" Outline>Next</Button>
+                                 </Div>
+                             </CardTitle>
+                         </CardBody>
+                     </Card>
+                 </CardDeck>
+             </Animate>
+            }
+        }
+
+<AuthorizeView Context="AuthorizedContext">
+    <Authorized>
+        <Row>
+            <Column ColumnSize="ColumnSize.Is6.Is6.WithOffset">
+                <Card>
+                    <CardBody>
+                        <CardTitle>
+                            YOU ARE AUTHORIZED
+                        </CardTitle>
+                        <CardText>
+                            <LoginDisplay />
+                        </CardText>
+                    </CardBody>
+                </Card>
+            </Column>
+        </Row>
+    </Authorized>
+    <NotAuthorized>
+        <Row>
+            <Column ColumnSize="ColumnSize.Is6.Is6.WithOffset">
+                <Card>
+                    <CardBody>
+                        <CardTitle>
+                            Please log in, you need to use your Snapfisher Account
+                        </CardTitle>
+                        <CardText>
+                            <LoginDisplay />
+                        </CardText>
+                    </CardBody>
+                </Card>
+            </Column>
+        </Row>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+
+@code
+{
+    List<Construct>? wordList = new List<Construct>();
+    ChoiceSelection currentChoice = new ChoiceSelection();
+
+    bool showAnimate = true;
+
+    string studyString = string.Empty;
+    string challengeString = string.Empty;
+
+
+    List<TextColor> chalTextColors = new List<TextColor>(4) { TextColor.Default, TextColor.Default, TextColor.Default, TextColor.Default };
+    List<bool> chalDisabled = new List<bool>(4) { false, false, false, false };
+
+    public string CreateStudyString(int cardsViewed)
+    {
+        return $"{cardsViewed} cards viewed";
+    }
+
+    public string CreateChallengeString(int cardsViewed, int correctAnswers)
+    {
+        return $"{cardsViewed} questions, {correctAnswers} correct, {(correctAnswers * 100) / (cardsViewed - 1)} percent correct";
+    }
+
+
+    Task OnSelectedLayoutChanged(string value)
+    {
+        if(statusTracker.CardsViewed == 1)
+        {
+            if(value == "study")
+                studyString = "1 card viewed";
+            else
+                challengeString = "1 question, 0 correct, 0 percent correct";
+        }
+        else
+        {
+            if (value == "study")
+                studyString = CreateStudyString(statusTracker.CardsViewed);
+            else
+                challengeString = CreateChallengeString(statusTracker.CardsViewed, statusTracker.CorrectAnswers);
+        }
+
+        statusTracker.SelectedLayout = value;
+        return Task.CompletedTask;
+    }
+
+    private async Task OnStudyClicked()
+    {
+        showAnimate = false;
+        StateHasChanged();
+        await Task.Yield();
+        await Task.Delay(200);
+        if (MasterWordList is not null)
+            currentChoice = MasterWordList.GetNextChoice();
+        statusTracker.CardsViewed++;
+        studyString = CreateStudyString(statusTracker.CardsViewed);
+        showAnimate = true;
+        StateHasChanged();
+
+    }
+
+    private async void OnChallengeClicked(int i)
+    {
+        List<int> staysDisabled = new();
+        int correct = -1;
+
+        if (currentChoice.CorrectAnswer == i)
+        {
+            correct = i;
+
+            for (int c = 0; c < 4; ++c)
+            {
+                if (c != i)
+                    chalTextColors[c] = TextColor.Light;
+                else
+                    chalTextColors[c] = TextColor.Success;
+
+                if (chalDisabled[c] == true)
+                    staysDisabled.Add(c);
+
+                chalDisabled[c] = true;
+            }
+
+            if (staysDisabled.Count < 1)
+                statusTracker.CorrectAnswers++;
+
+            StateHasChanged();
+            await Task.Yield();
+            await Task.Delay(800);
+
+
+            showAnimate = false;
+            StateHasChanged();
+            await Task.Yield();
+            await Task.Delay(200);
+        }
+        else
+        {
+            for (int c = 0; c < 4; ++c)
+            {
+                if (chalDisabled[c] == true)
+                    staysDisabled.Add(c);
+            }
+            staysDisabled.Add(i);
+
+            chalTextColors[i] = TextColor.Danger;
+            chalDisabled[i] = true;
+            StateHasChanged();
+        }
+
+        if (correct == i)
+        {
+            if (MasterWordList is not null)
+                currentChoice = MasterWordList.GetNextChoice();
+            statusTracker.CardsViewed++;
+            challengeString = CreateChallengeString(statusTracker.CardsViewed, statusTracker.CorrectAnswers);
+        }
+
+        if (correct == i)
+        {
+            for (int c = 0; c < 4; ++c)
+            {
+                chalTextColors[c] = TextColor.Default;
+                chalDisabled[c] = false;
+            }
+        }
+        else
+        {
+            for (int c = 0; c < 4; ++c)
+            {
+                if (staysDisabled.Contains(c))
+                    continue;
+                chalDisabled[c] = false;
+            }
+        }
+
+        showAnimate = true;
+        StateHasChanged();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (statusTracker.CardsViewed == 1)
+        {
+            studyString = "1 card viewed";
+            challengeString = "1 question, 0 correct, 0 percent correct";
+        }
+        else
+        {
+            studyString = CreateStudyString(statusTracker.CardsViewed);
+            challengeString = CreateChallengeString(statusTracker.CardsViewed, statusTracker.CorrectAnswers);
+        }
+
+        if (MasterWordList.Count <= 0)
+        {
+            //string s = await httpClient.GetStringAsync("verbs.json");
+            List<Verb>? verbList = await httpClient.GetFromJsonAsync<List<Verb>>("verbs.json");
+            if (verbList is not null)
+            {
+                MasterWordList.AddWords(verbList.Cast<Construct>().ToList());
+            }
+            List<Number>? numberList = await httpClient.GetFromJsonAsync<List<Number>>("numbers.json");
+            if (numberList is not null)
+            {
+                MasterWordList.AddWords(numberList.Cast<Construct>().ToList());
+            }
+            List<Phrase>? phraseList = await httpClient.GetFromJsonAsync<List<Phrase>>("phrases.json");
+            if (phraseList is not null)
+            {
+                MasterWordList.AddWords(phraseList.Cast<Construct>().ToList());
+            }
+            List<Adverb>? adverbList = await httpClient.GetFromJsonAsync<List<Adverb>>("adverbs.json");
+            if (adverbList is not null)
+            {
+                MasterWordList.AddWords(adverbList.Cast<Construct>().ToList());
+            }
+            List<Noun>? nounList = await httpClient.GetFromJsonAsync<List<Noun>>("nouns.json");
+            if (nounList is not null)
+            {
+                MasterWordList.AddWords(nounList.Cast<Construct>().ToList());
+            }
+            List<Adjective>? adjectiveList = await httpClient.GetFromJsonAsync<List<Adjective>>("adjectives.json");
+            if (adjectiveList is not null)
+            {
+                MasterWordList.AddWords(adjectiveList.Cast<Construct>().ToList());
+            }
+            List<Article>? articleList = await httpClient.GetFromJsonAsync<List<Article>>("articles.json");
+            if (articleList is not null)
+            {
+                MasterWordList.AddWords(articleList.Cast<Construct>().ToList());
+            }
+            List<Pronoun>? pronounList = await httpClient.GetFromJsonAsync<List<Pronoun>>("pronouns.json");
+            if (pronounList is not null)
+            {
+                MasterWordList.AddWords(pronounList.Cast<Construct>().ToList());
+            }
+
+        }
+        currentChoice = MasterWordList.GetNextChoice();
+
+        //await base.OnInitializedAsync();
+    }
+
+}

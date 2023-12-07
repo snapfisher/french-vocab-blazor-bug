@@ -1,0 +1,45 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <main>
+        <Layout>
+            @*             <Layout Sider>
+            <LayoutSider>
+            <LayoutSiderContent>
+            <Bar Mode="BarMode.VerticalInline"
+            CollapseMode="BarCollapseMode.Small"
+            Breakpoint="Breakpoint.Desktop"
+            NavigationBreakpoint="Breakpoint.Tablet"
+            ThemeContrast="ThemeContrast.Dark">
+            <BarBrand>
+            <BarItem>
+            <BarLink To="/">
+            <BarIcon IconName="IconName.Dashboard" />
+            French Vocab
+            </BarLink>
+            </BarItem>
+            </BarBrand>
+            <BarMenu>
+            <BarStart>
+            <BarItem>
+            <BarLink To="/">
+            <BarIcon IconName="IconName.Map" />
+            Eventually Do Something
+            </BarLink>
+            </BarItem>
+            </BarStart>
+            </BarMenu>
+            </Bar>
+            </LayoutSiderContent>
+            </LayoutSider>
+            <Layout> *@
+            <LayoutContent>
+                <article class="content px-4">
+                    @Body
+                </article>
+            </LayoutContent>
+            @*                 </Layout>
+            </Layout> *@
+        </Layout>
+    </main>
+</div>

@@ -1,0 +1,6 @@
+[
+  {"Type":"pronoun","Label":"il","Pronom": [{"F":"il","E":"he/it"},{"F":"lui","E":"him"}]},
+  {"Type":"pronoun","Label":"elle","Pronom": [{"F":"elle","E":"she/it"},{"F":"lui","E":"her"}]},
+  {"Type":"pronoun","Label":"ils","Pronom": [{"F":"ils","E":"they (masc)"},{"F":"leur","E":"they (masc, indirect)"}]},
+  {"Type":"pronoun","Label":"elles","Pronom": [{"F":"elles","E":"they (fem)"},{"F":"leur","E":"they (fem, indirect)"}]}
+]

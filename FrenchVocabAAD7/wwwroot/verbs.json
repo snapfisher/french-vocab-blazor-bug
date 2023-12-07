@@ -1,0 +1,276 @@
+[
+  {
+    "Type": "verb","Label": "avoir",
+   "Infinitive": [{"F": "avoir","E": "to have"}],
+   "IndicatifPresent": [{"F": "j'ai","E": "I have"},{"F": "tu as","E": "you have (sing)"},{"F": "il a","E": "he has"},{"F": "elle a","E": "she has"},{"F": "nous avons","E": "we have"},{"F": "vous avez","E": "you have (plu)"},{"F": "ils ont","E": "they have (m)"},{"F": "elles ont","E": "they have (f)"},{"F": "as-tu","E": "have you? (sing)"},{"F": "avez-vous ","E": "have you? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "être",
+    "Infinitive": [{"F": "être","E": "to be"}],
+    "IndicatifPresent": [{"F": "je suis","E": "I am"},{"F": "tu es","E": "you are (sing)"},{"F": "il est","E": "he is"},{"F": "elle est","E": "she is"},{"F": "nous sommes","E": "we are"},{"F": "vous êtes","E": "you are (plu)"},{"F": "ils sont","E": "they are (m)"},{"F": "elles sont","E": "they are (f)"},{"F": "es-tu","E": "are you? (sing)"},{"F": "êtes-vous ","E": "are you? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "aimer",
+    "Infinitive": [{"F": "aimer","E": "to like/love"}],
+    "IndicatifPresent": [{"F": "j'aime","E": "I like/love"},{"F": "tu aimes","E": "you like/love (sing)"},{"F": "il aime","E": "he likes/loves"},{"F": "elle aime","E": "she likes/loves"},{"F": "nous aimons","E": "we like/love"},{"F": "vous aimez","E": "you like/love (plu)"},{"F": "ils aiment","E": "they like/love (m)"},{"F": "elles aiment","E": "they like/love (f)"},{"F": "aimes-tu","E": "do you like/love? (sing)"},{"F": "aimez-vous ","E": "do you like/love? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "être aimé",
+   "Infinitive": [{"F": "être aimé","E": "to be liked/loved"}],
+   "IndicatifPresent": [{"F": "je suis aimé","E": "I am liked/loved"},{"F": "tu es aimé","E": "you are liked/loved (sing)"},{"F": "il est aimé","E": "he is liked/loved"},{"F": "elle est aimée","E": "she is liked/loved"},{"F": "nous sommes aimés","E": "we are liked/loved"},{"F": "vous êtes aimés","E": "you are liked/loved (plu)"},{"F": "ils sont aimés","E": "they are liked/loved (m)"},{"F": "elles sont aimées","E": "they are liked/loved (f)"},{"F": "es-tu aimé","E": "are you liked/loved? (sing)"},{"F": "êtes-vous aimés","E": "are you liked/loved? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "manger",
+   "Infinitive": [{"F": "manger","E": "to eat"}],
+   "IndicatifPresent": [{"F": "je mange","E": "I eat"},{"F": "tu manges","E": "you eat (sing)"},{"F": "il mange","E": "he eats"},{"F": "elle mange","E": "she eats"},{"F": "nous mangeons","E": "we eat"},{"F": "vous mangez","E": "you eat (plu)"},{"F": "ils mangent","E": "they eat (m)"},{"F": "elles mangent","E": "they eat (f)"},{"F": "manges-tu","E": "do you eat? (sing)"},{"F": "mangez-vous ","E": "do you eat? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "aller",
+    "Infinitive": [{"F": "aller","E": "to go"}],
+    "IndicatifPresent": [{"F": "je vais","E": "I go"},{"F": "tu vas","E": "you go (sing)"},{"F": "il va","E": "he goes"},{"F": "elle va","E": "she goes"},{"F": "nous allons","E": "we go"},{"F": "vous allez","E": "you go (plu)"},{"F": "ils vont","E": "they go (m)"},{"F": "elles vont","E": "they go (f)"},{"F": "vas-tu","E": "do you go? (sing)"},{"F": "allez-vous ","E": "do you go? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "dormir",
+   "Infinitive": [{"F": "dormir","E": "to sleep"}],
+   "IndicatifPresent": [{"F": "je dors","E": "I sleep"},{"F": "tu dors","E": "you sleep (sing)"},{"F": "il dort","E": "he sleeps"},{"F": "elle dort","E": "she sleeps"},{"F": "nous dormons","E": "we sleep"},{"F": "vous dormez","E": "you sleep (plu)"},{"F": "ils dorment","E": "they sleep (m)"},{"F": "elles dorment","E": "they sleep (f)"},{"F": "dors-tu","E": "do you sleep? (sing)"},{"F": "dormez-vous ","E": "do you sleep? (plu)"}]
+  },
+  {"Type": "verb","Label": "vouloir",
+   "Infinitive": [{"F": "vouloir","E": "to want"}],
+   "IndicatifPresent": [{"F": "je veux","E": "I want"},{"F": "tu veux","E": "you want (sing)"},{"F": "il veut","E": "he wants"},{"F": "elle veut","E": "she wants"},{"F": "nous voulons","E": "we want"},{"F": "vous voulez","E": "you want (plu)"},{"F": "ils veulent","E": "they want (m)"},{"F": "elles veulent","E": "they want (f)"},{"F": "veux-tu","E": "do you want? (sing)"},{"F": "voulez-vous ","E": "do you want? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "prendre",
+    "Infinitive": [{"F": "prendre","E": "to take"}],
+    "IndicatifPresent": [{"F": "je prends","E": "I take"},{"F": "tu prends","E": "you take (sing)"},{"F": "il prend","E": "he takes"},{"F": "elle prend","E": "she takes"},{"F": "nous prenons","E": "we take"},{"F": "vous prenez","E": "you take (plu)"},{"F": "ils prennent","E": "they take (m)"},{"F": "elles prennent","E": "they take (f)"},{"F": "prends-tu","E": "do you take? (sing)"},{"F": "prenez-vous ","E": "do you take? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "faire",
+    "Infinitive": [{"F": "faire","E": "to do"}],
+    "IndicatifPresent": [{"F": "je fais","E": "I do"},{"F": "tu fais","E": "you do (sing)"},{"F": "il fait","E": "he does"},{"F": "elle fait","E": "she does"},{"F": "nous faisons","E": "we do"},{"F": "vous faites","E": "you do (plu)"},{"F": "ils font","E": "they do (m)"},{"F": "elles font","E": "they do (f)"},{"F": "fais-tu","E": "do you? (sing)"},{"F": "faites-vous ","E": "do you? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "parler",
+    "Infinitive": [{"F": "parler","E": "to speak"}],
+    "IndicatifPresent": [{"F": "je parle","E": "I speak"},{"F": "tu parles","E": "you speak (sing)"},{"F": "il parle","E": "he speaks"},{"F": "elle parle","E": "she speaks"},{"F": "nous parlons","E": "we speak"},{"F": "vous parlez","E": "you speak (plu)"},{"F": "ils parlent","E": "they speak (m)"},{"F": "elles parlent","E": "they speak (f)"},{"F": "parles-tu","E": "do you speak? (sing)"},{"F": "parlez-vous ","E": "do you speak? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "jouer",
+    "Infinitive": [{"F": "jouer","E": "to play"}],
+    "IndicatifPresent": [{"F": "je joue","E": "I play"},{"F": "tu joues","E": "you play (sing)"},{"F": "il joue","E": "he plays"},{"F": "elle joue","E": "she plays"},{"F": "nous jouons","E": "we play"},{"F": "vous jouez","E": "you play (plu)"},{"F": "ils jouent","E": "they play (m)"},{"F": "elles jouent","E": "they play (f)"},{"F": "joues-tu","E": "do you play? (sing)"},{"F": "parlez-vous ","E": "do you jouez? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "finir",
+    "Infinitive": [{"F": "finir","E": "to finish"}],
+    "IndicatifPresent": [{"F": "je finis","E": "I finish"},{"F": "tu finis","E": "you finish (sing)"},{"F": "il finit","E": "he finishes"},{"F": "elle finit","E": "she finishes"},{"F": "nous finissons","E": "we finish"},{"F": "vous finissez","E": "you finish (plu)"},{"F": "ils finissent","E": "they finish (m)"},{"F": "elles finissent","E": "they finish (f)"},{"F": "finis-tu","E": "do you finish? (sing)"},{"F": "finissez-vous ","E": "do you finish? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "vivre",
+    "Infinitive": [{"F": "vivre","E": "to live"}],
+    "IndicatifPresent": [{"F": "je vis","E": "I live"},{"F": "tu vis","E": "you live (sing)"},{"F": "il vit","E": "he lives"},{"F": "elle vit","E": "she lives"},{"F": "nous vivons","E": "we live"},{"F": "vous vivez","E": "you live (plu)"},{"F": "ils vivent","E": "they live (m)"},{"F": "elles vivent","E": "they live (f)"},{"F": "vis-tu","E": "do you live? (sing)"},{"F": "vivez-vous ","E": "do you live? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "savoir",
+    "Infinitive": [{"F": "savoir","E": "to know"}],
+    "IndicatifPresent": [{"F": "je sais","E": "I know"},{"F": "tu sais","E": "you know (sing)"},{"F": "il sait","E": "he knows"},{"F": "elle sait","E": "she knows"},{"F": "nous savons","E": "we know"},{"F": "vous savez","E": "you know (plu)"},{"F": "ils savent","E": "they know (m)"},{"F": "elles savent","E": "they know (f)"},{"F": "sais-tu","E": "do you know? (sing)"},{"F": "savez-vous ","E": "do you know? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "pouvoir",
+    "Infinitive": [{"F": "pouvoir","E": "to be able to"}],
+    "IndicatifPresent": [{"F": "je peux","E": "I can"},{"F": "tu peux","E": "you can (sing)"},{"F": "il peut","E": "he can"},{"F": "elle peut","E": "she can"},{"F": "nous pouvons","E": "we can"},{"F": "vous pouvez","E": "you can (plu)"},{"F": "ils peuvent","E": "they can (m)"},{"F": "elles peuvent","E": "they can (f)"},{"F": "peux-tu","E": "can you? (sing)"},{"F": "pouvez-vous ","E": "can you? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "devoir",
+    "Infinitive": [{"F": "devoir","E": "to have to"}],
+    "IndicatifPresent": [{"F": "je dois","E": "I have to"},{"F": "tu dois","E": "you have to (sing)"},{"F": "il doit","E": "he has to"},{"F": "elle doit","E": "she has to"},{"F": "nous devons","E": "we have to"},{"F": "vous devez","E": "you have to (plu)"},{"F": "ils doivent","E": "they have to (m)"},{"F": "elles doivent","E": "they have to (f)"},{"F": "dois-tu","E": "do you have to? (sing)"},{"F": "devez-vous ","E": "do you have to? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "croire",
+    "Infinitive": [{"F": "croire","E": "to believe"}],
+    "IndicatifPresent": [{"F": "je crois","E": "I believe"},{"F": "tu crois","E": "you believe (sing)"},{"F": "il croit","E": "he believes"},{"F": "elle croit","E": "she believes"},{"F": "nous croyons","E": "we believe"},{"F": "vous croyez","E": "you believe (plu)"},{"F": "ils croient","E": "they believe (m)"},{"F": "elles croient","E": "they believe (f)"},{"F": "crois-tu","E": "do you believe? (sing)"},{"F": "croyez-vous ","E": "do you believe? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "voir",
+    "Infinitive": [{"F": "voir","E": "to see"}],
+    "IndicatifPresent": [{"F": "je vois","E": "I see"},{"F": "tu vois","E": "you see (sing)"},{"F": "il voit","E": "he sees"},{"F": "elle voit","E": "she sees"},{"F": "nous voyons","E": "we see"},{"F": "vous voyez","E": "you see (plu)"},{"F": "ils voient","E": "they see (m)"},{"F": "elles voient","E": "they see (f)"},{"F": "vois-tu","E": "do you see? (sing)"},{"F": "voyez-vous ","E": "do you see? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "dire",
+    "Infinitive": [{"F": "dire","E": "to say"}],
+    "IndicatifPresent": [{"F": "je dis","E": "I say"},{"F": "tu dis","E": "you say (sing)"},{"F": "il dit","E": "he says"},{"F": "elle dit","E": "she says"},{"F": "nous disons","E": "we say"},{"F": "vous dites","E": "you say (plu)"},{"F": "ils disent","E": "they say (m)"},{"F": "elles disent","E": "they say (f)"},{"F": "dis-tu","E": "do you say? (sing)"},{"F": "dites-vous ","E": "do you say? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "écrire",
+    "Infinitive": [{"F": "écrire","E": "to write"}],
+    "IndicatifPresent": [{"F": "j'écris","E": "I write"},{"F": "tu écris","E": "you write (sing)"},{"F": "il écrit","E": "he writes"},{"F": "elle écrit","E": "she writes"},{"F": "nous écrivons","E": "we write"},{"F": "vous écrivez","E": "you write (plu)"},{"F": "ils écrivent","E": "they write (m)"},{"F": "elles écrivent","E": "they write (f)"},{"F": "écris-tu","E": "do you write? (sing)"},{"F": "écrivez-vous ","E": "do you write? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "lire",
+    "Infinitive": [{"F": "lire","E": "to read"}],
+    "IndicatifPresent": [{"F": "je lis","E": "I read"},{"F": "tu lis","E": "you read (sing)"},{"F": "il lit","E": "he reads"},{"F": "elle lit","E": "she reads"},{"F": "nous lisons","E": "we read"},{"F": "vous lisez","E": "you read (plu)"},{"F": "ils lisent","E": "they read (m)"},{"F": "elles lisent","E": "they read (f)"},{"F": "lis-tu","E": "do you read? (sing)"},{"F": "lisez-vous ","E": "do you read? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "comprendre",
+    "Infinitive": [{"F": "comprendre","E": "to understand"}],
+    "IndicatifPresent": [{"F": "je comprends","E": "I understand"},{"F": "tu comprends","E": "you understand (sing)"},{"F": "il comprend","E": "he understands"},{"F": "elle comprend","E": "she understands"},{"F": "nous comprenons","E": "we understand"},{"F": "vous comprenez","E": "you understand (plu)"},{"F": "ils comprennent","E": "they understand (m)"},{"F": "elles comprennent","E": "they understand (f)"},{"F": "comprends-tu","E": "do you understand? (sing)"},{"F": "comprenez-vous ","E": "do you understand? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "mettre",
+    "Infinitive": [{"F": "mettre","E": "to put"}],
+    "IndicatifPresent": [{"F": "je mets","E": "I put"},{"F": "tu mets","E": "you put (sing)"},{"F": "il met","E": "he puts"},{"F": "elle met","E": "she puts"},{"F": "nous mettons","E": "we put"},{"F": "vous mettez","E": "you put (plu)"},{"F": "ils mettent","E": "they put (m)"},{"F": "elles mettent","E": "they put (f)"},{"F": "mets-tu","E": "do you put? (sing)"},{"F": "mettez-vous ","E": "do you put? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "apprendre",
+    "Infinitive": [{"F": "apprendre","E": "to learn"}],
+    "IndicatifPresent": [{"F": "j'apprends","E": "I learn"},{"F": "tu apprends","E": "you learn (sing)"},{"F": "il apprend","E": "he learns"},{"F": "elle apprend","E": "she learns"},{"F": "nous apprenons","E": "we learn"},{"F": "vous apprenez","E": "you learn (plu)"},{"F": "ils apprennent","E": "they learn (m)"},{"F": "elles apprennent","E": "they learn (f)"},{"F": "apprends-tu","E": "do you learn? (sing)"},{"F": "apprenez-vous ","E": "do you learn? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "compter",
+    "Infinitive": [{"F": "compter","E": "to count"}],
+    "IndicatifPresent": [{"F": "je compte","E": "I count"},{"F": "tu comptes","E": "you count (sing)"},{"F": "il compte","E": "he counts"},{"F": "elle compte","E": "she counts"},{"F": "nous comptons","E": "we count"},{"F": "vous comptez","E": "you count (plu)"},{"F": "ils comptent","E": "they count (m)"},{"F": "elles comptent","E": "they count (f)"},{"F": "comptes-tu","E": "do you count? (sing)"},{"F": "comptez-vous ","E": "do you count? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "penser",
+    "Infinitive": [{"F": "penser","E": "to think"}],
+    "IndicatifPresent": [{"F": "je pense","E": "I think"},{"F": "tu penses","E": "you think (sing)"},{"F": "il pense","E": "he thinks"},{"F": "elle pense","E": "she thinks"},{"F": "nous pensons","E": "we think"},{"F": "vous pensez","E": "you think (plu)"},{"F": "ils pensent","E": "they think (m)"},{"F": "elles pensent","E": "they think (f)"},{"F": "penses-tu","E": "do you think? (sing)"},{"F": "pensez-vous ","E": "do you think? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "trouver",
+    "Infinitive": [{"F": "trouver","E": "to find"}],
+    "IndicatifPresent": [{"F": "je trouve","E": "I find"},{"F": "tu trouves","E": "you find (sing)"},{"F": "il trouve","E": "he finds"},{"F": "elle trouve","E": "she finds"},{"F": "nous trouvons","E": "we find"},{"F": "vous trouvez","E": "you find (plu)"},{"F": "ils trouvent","E": "they find (m)"},{"F": "elles trouvent","E": "they find (f)"},{"F": "trouves-tu","E": "do you find? (sing)"},{"F": "trouvez-vous ","E": "do you find? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "chercher",
+    "Infinitive": [{"F": "chercher","E": "to look for"}],
+    "IndicatifPresent": [{"F": "je cherche","E": "I look for"},{"F": "tu cherches","E": "you look for (sing)"},{"F": "il cherche","E": "he looks for"},{"F": "elle cherche","E": "she looks for"},{"F": "nous cherchons","E": "we look for"},{"F": "vous cherchez","E": "you look for (plu)"},{"F": "ils cherchent","E": "they look for (m)"},{"F": "elles cherchent","E": "they look for (f)"},{"F": "cherches-tu","E": "do you look for? (sing)"},{"F": "cherchez-vous ","E": "do you look for? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "regarder",
+    "Infinitive": [{"F": "regarder","E": "to watch"}],
+    "IndicatifPresent": [{"F": "je regarde","E": "I watch"},{"F": "tu regardes","E": "you watch (sing)"},{"F": "il regarde","E": "he watches"},{"F": "elle regarde","E": "she watches"},{"F": "nous regardons","E": "we watch"},{"F": "vous regardez","E": "you watch (plu)"},{"F": "ils regardent","E": "they watch (m)"},{"F": "elles regardent","E": "they watch (f)"},{"F": "regardes-tu","E": "do you watch? (sing)"},{"F": "regardez-vous ","E": "do you watch? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "écouter",
+    "Infinitive": [{"F": "écouter","E": "to listen"}],
+    "IndicatifPresent": [{"F": "j'écoute","E": "I listen"},{"F": "tu écoutes","E": "you listen (sing)"},{"F": "il écoute","E": "he listens"},{"F": "elle écoute","E": "she listens"},{"F": "nous écoutons","E": "we listen"},{"F": "vous écoutez","E": "you listen (plu)"},{"F": "ils écoutent","E": "they listen (m)"},{"F": "elles écoutent","E": "they listen (f)"},{"F": "écoutes-tu","E": "do you listen? (sing)"},{"F": "écoutez-vous ","E": "do you listen? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "tourner",
+    "Infinitive": [{"F": "tourner","E": "to turn"}],
+    "IndicatifPresent": [{"F": "je tourne","E": "I turn"},{"F": "tu tournes","E": "you turn (sing)"},{"F": "il tourne","E": "he turns"},{"F": "elle tourne","E": "she turns"},{"F": "nous tournons","E": "we turn"},{"F": "vous tournez","E": "you turn (plu)"},{"F": "ils tournent","E": "they turn (m)"},{"F": "elles tournent","E": "they turn (f)"},{"F": "tournes-tu","E": "do you turn? (sing)"},{"F": "tournez-vous ","E": "do you turn? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "monter",
+    "Infinitive": [{"F": "monter","E": "to go up"}],
+    "IndicatifPresent": [{"F": "je monte","E": "I go up"},{"F": "tu montes","E": "you go up (sing)"},{"F": "il monte","E": "he goes up"},{"F": "elle monte","E": "she goes up"},{"F": "nous montons","E": "we go up"},{"F": "vous montez","E": "you go up (plu)"},{"F": "ils montent","E": "they go up (m)"},{"F": "elles montent","E": "they go up (f)"},{"F": "montes-tu","E": "do you go up? (sing)"},{"F": "montez-vous ","E": "do you go up? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "descendre",
+    "Infinitive": [{"F": "descendre","E": "to go down"}],
+    "IndicatifPresent": [{"F": "je descends","E": "I go down"},{"F": "tu descends","E": "you go down (sing)"},{"F": "il descend","E": "he goes down"},{"F": "elle descend","E": "she goes down"},{"F": "nous descendons","E": "we go down"},{"F": "vous descendez","E": "you go down (plu)"},{"F": "ils descendent","E": "they go down (m)"},{"F": "elles descendent","E": "they go down (f)"},{"F": "descends-tu","E": "do you go down? (sing)"},{"F": "descendez-vous ","E": "do you go down? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "sortir",
+    "Infinitive": [{"F": "sortir","E": "to go out"}],
+    "IndicatifPresent": [{"F": "je sors","E": "I go out"},{"F": "tu sors","E": "you go out (sing)"},{"F": "il sort","E": "he goes out"},{"F": "elle sort","E": "she goes out"},{"F": "nous sortons","E": "we go out"},{"F": "vous sortez","E": "you go out (plu)"},{"F": "ils sortent","E": "they go out (m)"},{"F": "elles sortent","E": "they go out (f)"},{"F": "sors-tu","E": "do you go out? (sing)"},{"F": "sortez-vous ","E": "do you go out? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "entrer",
+    "Infinitive": [{"F": "entrer","E": "to enter"}],
+    "IndicatifPresent": [{"F": "j'entre","E": "I enter"},{"F": "tu entres","E": "you enter (sing)"},{"F": "il entre","E": "he enters"},{"F": "elle entre","E": "she enters"},{"F": "nous entrons","E": "we enter"},{"F": "vous entrez","E": "you enter (plu)"},{"F": "ils entrent","E": "they enter (m)"},{"F": "elles entrent","E": "they enter (f)"},{"F": "entres-tu","E": "do you enter? (sing)"},{"F": "entrez-vous ","E": "do you enter? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "rester",
+    "Infinitive": [{"F": "rester","E": "to stay"}],
+    "IndicatifPresent": [{"F": "je reste","E": "I stay"},{"F": "tu restes","E": "you stay (sing)"},{"F": "il reste","E": "he stays"},{"F": "elle reste","E": "she stays"},{"F": "nous restons","E": "we stay"},{"F": "vous restez","E": "you stay (plu)"},{"F": "ils restent","E": "they stay (m)"},{"F": "elles restent","E": "they stay (f)"},{"F": "restes-tu","E": "do you stay? (sing)"},{"F": "restez-vous ","E": "do you stay? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "partir",
+    "Infinitive": [{"F": "partir","E": "to leave"}],
+    "IndicatifPresent": [{"F": "je pars","E": "I leave"},{"F": "tu pars","E": "you leave (sing)"},{"F": "il part","E": "he leaves"},{"F": "elle part","E": "she leaves"},{"F": "nous partons","E": "we leave"},{"F": "vous partez","E": "you leave (plu)"},{"F": "ils partent","E": "they leave (m)"},{"F": "elles partent","E": "they leave (f)"},{"F": "pars-tu","E": "do you leave? (sing)"},{"F": "partez-vous ","E": "do you leave? (plu)"}]
+  },
+  {
+
+    "Type": "verb","Label": "arriver","Infinitive": [{"F": "arriver","E": "to arrive"}],
+    "IndicatifPresent": [{"F": "j'arrive","E": "I arrive"},{"F": "tu arrives","E": "you arrive (sing)"},{"F": "il arrive","E": "he arrives"},{"F": "elle arrive","E": "she arrives"},{"F": "nous arrivons","E": "we arrive"},{"F": "vous arrivez","E": "you arrive (plu)"},{"F": "ils arrivent","E": "they arrive (m)"},{"F": "elles arrivent","E": "they arrive (f)"},{"F": "arrives-tu","E": "do you arrive? (sing)"},{"F": "arrivez-vous ","E": "do you arrive? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "tomber",
+    "Infinitive": [{"F": "tomber","E": "to fall"}],
+    "IndicatifPresent": [{"F": "je tombe","E": "I fall"},{"F": "tu tombes","E": "you fall (sing)"},{"F": "il tombe","E": "he falls"},{"F": "elle tombe","E": "she falls"},{"F": "nous tombons","E": "we fall"},{"F": "vous tombez","E": "you fall (plu)"},{"F": "ils tombent","E": "they fall (m)"},{"F": "elles tombent","E": "they fall (f)"},{"F": "tombes-tu","E": "do you fall? (sing)"},{"F": "tombez-vous ","E": "do you fall? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "revenir",
+    "Infinitive": [{"F": "revenir","E": "to come back"}],
+    "IndicatifPresent": [{"F": "je reviens","E": "I come back"},{"F": "tu reviens","E": "you come back (sing)"},{"F": "il revient","E": "he comes back"},{"F": "elle revient","E": "she comes back"},{"F": "nous revenons","E": "we come back"},{"F": "vous revenez","E": "you come back (plu)"},{"F": "ils reviennent","E": "they come back (m)"},{"F": "elles reviennent","E": "they come back (f)"},{"F": "reviens-tu","E": "do you come back? (sing)"},{"F": "revenez-vous ","E": "do you come back? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "retourner",
+    "Infinitive": [{"F": "retourner","E": "to return"}],
+    "IndicatifPresent": [{"F": "je retourne","E": "I return"},{"F": "tu retournes","E": "you return (sing)"},{"F": "il retourne","E": "he returns"},{"F": "elle retourne","E": "she returns"},{"F": "nous retournons","E": "we return"},{"F": "vous retournez","E": "you return (plu)"},{"F": "ils retournent","E": "they return (m)"},{"F": "elles retournent","E": "they return (f)"},{"F": "retournes-tu","E": "do you return? (sing)"},{"F": "retournez-vous ","E": "do you return? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "venir",
+    "Infinitive": [{"F": "venir","E": "to come"}],
+    "IndicatifPresent": [{"F": "je viens","E": "I come"},{"F": "tu viens","E": "you come (sing)"},{"F": "il vient","E": "he comes"},{"F": "elle vient","E": "she comes"},{"F": "nous venons","E": "we come"},{"F": "vous venez","E": "you come (plu)"},{"F": "ils viennent","E": "they come (m)"},{"F": "elles viennent","E": "they come (f)"},{"F": "viens-tu","E": "do you come? (sing)"},{"F": "venez-vous ","E": "do you come? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "habiter",
+    "Infinitive": [{"F": "habiter","E": "to live"}],
+    "IndicatifPresent": [{"F": "j'habite","E": "I live"},{"F": "tu habites","E": "you live (sing)"},{"F": "il habite","E": "he lives"},{"F": "elle habite","E": "she lives"},{"F": "nous habitons","E": "we live"},{"F": "vous habitez","E": "you live (plu)"},{"F": "ils habitent","E": "they live (m)"},{"F": "elles habitent","E": "they live (f)"},{"F": "habites-tu","E": "do you live? (sing)"},{"F": "habitez-vous ","E": "do you live? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "travailler",
+    "Infinitive": [{"F": "travailler","E": "to work"}],
+    "IndicatifPresent": [{"F": "je travaille","E": "I work"},{"F": "tu travailles","E": "you work (sing)"},{"F": "il travaille","E": "he works"},{"F": "elle travaille","E": "she works"},{"F": "nous travaillons","E": "we work"},{"F": "vous travaillez","E": "you work (plu)"},{"F": "ils travaillent","E": "they work (m)"},{"F": "elles travaillent","E": "they work (f)"},{"F": "travailles-tu","E": "do you work? (sing)"},{"F": "travaillez-vous ","E": "do you work? (plu)"}]
+  },
+  {
+    "Type": "verb","Label": "danser",
+    "Infinitive": [{"F": "danser","E": "to dance"}],
+    "IndicatifPresent": [{"F": "je danse","E": "I dance"},{"F": "tu danses","E": "you dance (sing)"},{"F": "il danse","E": "he dances"},{"F": "elle danse","E": "she dances"},{"F": "nous dansons","E": "we dance"},{"F": "vous dansez","E": "you dance (plu)"},{"F": "ils dansent","E": "they dance (m)"},{"F": "elles dansent","E": "they dance (f)"},{"F": "danses-tu","E": "do you dance? (sing)"},{"F": "dansez-vous ","E": "do you dance? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "nager", 
+    "Infinitive": [{"F": "nager", "E": "to swim"}], 
+    "IndicatifPresent": [{"F": "je nage", "E": "I swim"}, {"F": "tu nages", "E": "you swim (sing)"}, {"F": "il nage", "E": "he swims"}, {"F": "elle nage", "E": "she swims"}, {"F": "nous nageons", "E": "we swim"}, {"F": "vous nagez", "E": "you swim (plu)"}, {"F": "ils nagent", "E": "they swim (m)"}, {"F": "elles nagent", "E": "they swim (f)"},{"F": "nages-tu","E": "do you swim? (sing)"},{"F": "nagez-vous ","E": "do you swim? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "dessiner", 
+    "Infinitive": [{"F": "dessiner", "E": "to draw"}], 
+    "IndicatifPresent": [{"F": "je dessine", "E": "I draw"}, {"F": "tu dessines", "E": "you draw (sing)"}, {"F": "il dessine", "E": "he draws"}, {"F": "elle dessine", "E": "she draws"}, {"F": "nous dessinons", "E": "we draw"}, {"F": "vous dessinez", "E": "you draw (plu)"}, {"F": "ils dessinent", "E": "they draw (m)"}, {"F": "elles dessinent", "E": "they draw (f)"},{"F": "dessines-tu","E": "do you draw? (sing)"},{"F": "dessinez-vous ","E": "do you draw? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "visiter", 
+    "Infinitive": [{"F": "visiter", "E": "to visit"}], 
+    "IndicatifPresent": [{"F": "je visite", "E": "I visit"}, {"F": "tu visites", "E": "you visit (sing)"}, {"F": "il visite", "E": "he visits"}, {"F": "elle visite", "E": "she visits"}, {"F": "nous visitons", "E": "we visit"}, {"F": "vous visitez", "E": "you visit (plu)"}, {"F": "ils visitent", "E": "they visit (m)"}, {"F": "elles visitent", "E": "they visit (f)"},{"F": "visites-tu","E": "do you visit? (sing)"},{"F": "visitez-vous ","E": "do you visit? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "marcher", 
+    "Infinitive": [{"F": "marcher", "E": "to walk"}], 
+    "IndicatifPresent": [{"F": "je marche", "E": "I walk"}, {"F": "tu marches", "E": "you walk (sing)"}, {"F": "il marche", "E": "he walks"}, {"F": "elle marche", "E": "she walks"}, {"F": "nous marchons", "E": "we walk"}, {"F": "vous marchez", "E": "you walk (plu)"}, {"F": "ils marchent", "E": "they walk (m)"}, {"F": "elles marchent", "E": "they walk (f)"},{"F": "marches-tu","E": "do you walk? (sing)"},{"F": "marchez-vous ","E": "do you walk? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "plonger", 
+    "Infinitive": [{"F": "plonger", "E": "to dive"}], 
+    "IndicatifPresent": [{"F": "je plonge", "E": "I dive"}, {"F": "tu plonges", "E": "you dive (sing)"}, {"F": "il plonge", "E": "he dives"}, {"F": "elle plonge", "E": "she dives"}, {"F": "nous plongeons", "E": "we dive"}, {"F": "vous plongez", "E": "you dive (plu)"}, {"F": "ils plongent", "E": "they dive (m)"}, {"F": "elles plongent", "E": "they dive (f)"},{"F": "plonges-tu","E": "do you dive? (sing)"},{"F": "plongez-vous ","E": "do you dive? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "choisir", 
+    "Infinitive": [{"F": "choisir", "E": "to choose"}], 
+    "IndicatifPresent": [{"F": "je choisis", "E": "I choose"}, {"F": "tu choisis", "E": "you choose (sing)"}, {"F": "il choisit", "E": "he chooses"}, {"F": "elle choisit", "E": "she chooses"}, {"F": "nous choisissons", "E": "we choose"}, {"F": "vous choisissez", "E": "you choose (plu)"}, {"F": "ils choisissent", "E": "they choose (m)"}, {"F": "elles choisissent", "E": "they choose (f)"},{"F": "choisis-tu","E": "do you choose? (sing)"},{"F": "choisissez-vous ","E": "do you choose? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "détester", 
+    "Infinitive": [{"F": "détester", "E": "to hate"}], 
+    "IndicatifPresent": [{"F": "je déteste", "E": "I hate"}, {"F": "tu détestes", "E": "you hate (sing)"}, {"F": "il déteste", "E": "he hates"}, {"F": "elle déteste", "E": "she hates"}, {"F": "nous détestons", "E": "we hate"}, {"F": "vous détestez", "E": "you hate (plu)"}, {"F": "ils détestent", "E": "they hate (m)"}, {"F": "elles détestent", "E": "they hate (f)"},{"F": "détestes-tu","E": "do you hate? (sing)"},{"F": "détestez-vous ","E": "do you hate? (plu)"}]
+  },
+  {
+    "Type": "verb", "Label": "neiger", 
+    "Infinitive": [{"F": "neiger", "E": "to snow"}], 
+    "IndicatifPresent": [{"F": "il neige (a)", "E": "it snows (a)"}, {"F": "il neige (b)", "E": "it snows (b)"}, {"F": "il neige (c)", "E": "it snows (c)"}, {"F": "il neige (d)", "E": "it snows (d)"}, {"F": "il neige (e)", "E": "it snows (e)"}, {"F": "il neige (f)", "E": "it snows (f)"}, {"F": "il neige (g)", "E": "it snows (g)"}, {"F": "il neige (h)", "E": "it snows (h)"}, {"F": "il neige (i)", "E": "it snows (i)"}, {"F": "il neige (j)", "E": "it snows (j)"}]
+  },
+  {
+    "Type": "verb", "Label": "pleuvoir", 
+    "Infinitive": [{"F": "pleuvoir", "E": "to rain"}], 
+    "IndicatifPresent": [{"F": "il pleut (a)", "E": "it rains (a)"}, {"F": "il pleut (b)", "E": "it rains (b)"}, {"F": "il pleut (c)", "E": "it rains (c)"}, {"F": "il pleut (d)", "E": "it rains (d)"}, {"F": "il pleut (e)", "E": "it rains (e)"}, {"F": "il pleut (f)", "E": "it rainsv"}, {"F": "il pleut (g)", "E": "it rains (g)"}, {"F": "il pleut (h)", "E": "it rains (h)"}, {"F": "il pleut (i)", "E": "it rains (i)"}, {"F": "il pleut (j)", "E": "it rains (j)"}]
+  }
+]

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrenchVocabAAD7", "FrenchVocabAAD7\FrenchVocabAAD7.csproj", "{7A639AB9-E270-4F78-B020-950BCA23435D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A639AB9-E270-4F78-B020-950BCA23435D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A639AB9-E270-4F78-B020-950BCA23435D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A639AB9-E270-4F78-B020-950BCA23435D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A639AB9-E270-4F78-B020-950BCA23435D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {725E1156-BDE8-400C-98CB-2057F1315CFD}
+	EndGlobalSection
+EndGlobal
